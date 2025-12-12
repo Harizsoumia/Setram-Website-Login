@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulaire Demande Abonnement DOU - Student Submission Form</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="https://formulaire.setram.dz/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="https://formulaire.setram.dz/favicon.png">
+</head>
+<body>
+    
+    <!-- HEADER SECTION -->
+    <header>
+          
+           <img class="site-logo" src="images/setram-logo.png" alt="SETRAM logo">
+        <h1>Formulaire Demande Abonnement DOU</h1>
+        <div class="language-buttons">
+            <button class="lang-btn active">Français</button>
+            <button class="lang-btn">العربية</button>
+        </div>
+    </header>
+
+    <!-- MAIN FORM SECTION -->
+    <main>
+        <form id="subscriptionForm">
+            
+            <p class="required-text">Veuillez remplir tous les champs obligatoires marqués d'un astérisque (*)</p>
+
+                <!-- First Name -->
+            <div class="form-grid">
+                <div class="form-field">
+                    <label for="prenom">Prénom *</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+                </div>
+                <!-- Last Name -->
+                <div class="form-field">
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                </div>
+                <!-- Email -->
+                <div class="form-field">
+                    <label for="email">Adresse e-mail *</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+        
+                <div class="form-field">
+                    <label for="matricule">Matricule (sans année du bac au début) *</label>
+                    <input type="text" id="matricule" name="matricule" placeholder="Sans année du bac au début" required>
+                </div>
+                 <!-- Year -->
+                <div class="form-field">
+                    <label for="annee">Année du Baccalauréat *</label>
+                    <input id="annee" name="annee" type="number" placeholder="YYYY" min="1950" step="1" required />
+                </div>
+                 <!-- Phone Num -->
+                <div class="form-field">
+                    <label for="telephone">Numéro de téléphone *</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="0512345678" required>
+                </div>
+            </div>
+
+            <!-- University -->
+        
+                <div class="form-field">
+                    <label for="universite">Université *</label>
+<select id="universite" name="universite" required>
+    <option value="">Sélectionnez une université</option>
+    <option value="droit-sciences-politiques">Droit et Sciences Politiques</option>
+    <option value="enp">École Nationale Polytechnique</option>
+    <option value="ensa">École Nationale Supérieure Agronomique</option>
+    <option value="ensc">École Nationale Supérieure de Cybersécurité</option>
+    <option value="ensjsi">École Nationale Supérieure de Journalisme et des Sciences de l'Information</option>
+    <option value="ensta">École Nationale Supérieure de Technologie des Systèmes Autonomes</option>
+    <option value="ensn">École Nationale Supérieure des Nanosciences et Nanotechnologie</option>
+    <option value="enssmal">École Nationale Supérieure des Sciences de la Mer et de l'Aménagement du Littoral</option>
+    <option value="enssp">École Nationale Supérieure des Sciences Politiques</option>
+    <option value="ensta2">École Nationale Supérieure des Technologies Avancées</option>
+    <option value="enstp">École Nationale Supérieure des Travaux Publics</option>
+    <option value="esi">École Nationale Supérieure d'Informatique</option>
+    <option value="ensia">École Nationale Supérieure en Intelligence Artificielle Alger</option>
+    <option value="ensma">École Nationale Supérieure en Mathématiques Alger Pôle de Sidi Abdellah</option>
+    <option value="ensv">École Nationale Supérieure Vétérinaire</option>
+    <option value="ens-kouba">École Normale Supérieure - Kouba</option>
+    <option value="ens-bouzareah">École Normale Supérieure de Bouzaréah</option>
+    <option value="ens-sourds-muets">École Normale Supérieure des Sourds-Muets</option>
+    <option value="epau">École Polytechnique d'Architecture et d'Urbanisme Le Moudjahid Hocine Ait Ahmed</option>
+    <option value="essaia">École Supérieure des Sciences de l'Aliment et des Industries Agroalimentaires d'Alger</option>
+    <option value="maths-info">Mathématiques et Informatique</option>
+    <option value="sciences-eco">Sciences Économiques, de Gestion et Sciences Commerciales</option>
+    <option value="alger3">Université Alger 3</option>
+    <option value="alger1">Université d'Alger 1</option>
+    <option value="alger2">Université d'Alger 2</option>
+    <option value="ufc">Université de la Formation Continue</option>
+    <option value="ussa">Université des Sciences de la Santé Alger</option>
+    <option value="usthb">Université des Sciences et de la Technologie Houari Boumediene Alger</option>
+</select>
+                </div>
+            
+
+
+            <!-- PHOTO SECTION -->
+            <div class="photo-section">
+                <label>Photo d'identité</label>
+                
+                <div class="photo-guide">
+                    <p><strong>Exemple de format de photo d'identité :</strong></p>
+                    <p style="text-align: center; color: #666;">
+                      <img src="https://www.setram.dz/uploads/model_photo.png">
+                    </p>
+                </div>
+                
+                <div class="file-upload-wrapper">
+                    <input type="file" id="photoFile" name="photo" accept="image/jpeg,image/png" style="display: none;">
+                    <button type="button" class="file-button" onclick="document.getElementById('photoFile').click()">Choisir un fichier</button>
+                    <span id="fileName">Aucun fichier choisi</span>
+                </div>
+                
+                <p class="file-info">Veuillez insérer la photo d'identité qui sera utilisée pour votre carte d'abonnement DOU<br>JPEG/PNG, max 3 MB</p>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" class="submit-button">Soumettre ma demande</button>
+
+            <!-- FOOTER NOTE -->
+            <p class="footer-note">
+                En cas de problème, demande d'information ou modification, veuillez contacter le service client SETRAM via <a href="https://www.setram.dz/customer/ticket">ce lien</a>
+            </p>
+
+        </form>
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
